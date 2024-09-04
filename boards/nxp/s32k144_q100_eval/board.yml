@@ -1,0 +1,5 @@
+board:
+  name: s32k144_q100_eval
+  vendor: nxp
+  socs:
+    - name: s32k144

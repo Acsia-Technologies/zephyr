@@ -1,0 +1,30 @@
+/*
+
+	Required target SOC was PS32K144HFT0VLLT
+	But wasnt declared in the HAL
+	According to datasheet the following were assumed to be compatible
+
+	Compatible  by datasheet -> xS32k144H(F/A)xxLLx
+	Hence chose FS32K144HAT0MLLT which closely resembles the required target SOC
+
+*/
+
+
+identifier: s32k144_q100_eval
+name: NXP S32K144_Q100_eval
+vendor: nxp
+type: mcu
+arch: arm
+ram: 124
+flash: 512
+toolchain:
+  - zephyr
+supported:
+  - mpu
+  - gpio
+  - uart
+  - pinctrl
+  - spi
+  - i2c
+  - can
+  - adc

@@ -20,4 +20,8 @@ config FPU
 config HW_STACK_PROTECTION
 	default y if !USERSPACE
 
+#Added offset to align vector table when using McuBoot //TODO1 Check debugger issue and make specific to s32k144
+config ROM_START_OFFSET
+	default 0x400 if BOOTLOADER_MCUBOOT
+
 endif # SOC_SERIES_S32K1

@@ -45,7 +45,14 @@
 			interrupt-names = "command-complete", "read-collision", "double-bit";
 			#address-cells = <1>;
 			#size-cells = <1>;
-			status = "disabled";
+			status = "okay";
+			// TODO1 Move to 144specific dtsi 
+			flash0: flash@0 {
+				compatible = "soc-nv-flash";
+				reg = <0 DT_SIZE_K(512)>;
+				erase-block-size = <DT_SIZE_K(4)>;
+				write-block-size = <8>;
+			};
 		};
 
 		flexcan0: can@40024000 {

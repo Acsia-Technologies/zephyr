@@ -1,0 +1,26 @@
+# Copyright 2023 NXP
+# SPDX-License-Identifier: Apache-2.0
+#
+#
+#	Required target SOC was PS32K144HFT0VLLT
+#	But wasnt declared in the HAL
+#	According to datasheet the following were assumed to be compatible
+#
+#	Compatible  by datasheet -> xS32k144H(F/A)xxLLx
+#	Hence chose FS32K144HAT0MLLT which closely resembles the required target SOC
+
+
+if BOARD_S32K144_Q100_EVAL
+
+config BOARD
+	default "s32k144_q100_eval"
+
+if CAN
+
+config GPIO
+	default y
+
+endif # CAN
+
+
+endif # BOARD_S32K144_Q100_EVAL

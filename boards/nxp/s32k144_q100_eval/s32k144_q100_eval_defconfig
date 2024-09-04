@@ -1,0 +1,26 @@
+
+
+#	Required target SOC was PS32K144HFT0VLLT
+#	But wasnt declared in the HAL
+#	According to datasheet the following were assumed to be compatible
+#
+#	Compatible  by datasheet -> xS32k144H(F/A)xxLLx
+#	Hence chose FS32K144HAT0MLLT which closely resembles the required target SOC
+
+
+CONFIG_BUILD_OUTPUT_HEX=y
+
+
+# Use Systick as system clock
+CONFIG_SYS_CLOCK_HW_CYCLES_PER_SEC=80000000
+
+# Run from internal program flash
+CONFIG_XIP=y
+
+# Enable MPU
+CONFIG_ARM_MPU=y
+CONFIG_PINCTRL=y
+CONFIG_SERIAL=y
+CONFIG_CONSOLE=y
+CONFIG_UART_CONSOLE=y
+CONFIG_GPIO=y
