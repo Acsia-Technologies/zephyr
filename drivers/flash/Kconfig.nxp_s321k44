@@ -1,6 +1,6 @@
 config SOC_FLASH_FTFC
 	bool "NXP S32k flash shim driver"
-	default y
+	default y if SOC_S32K144
 	depends on DT_HAS_NXP_KINETIS_FTFC_ENABLED
 	select FLASH_HAS_PAGE_LAYOUT
 	select FLASH_HAS_DRIVER_ENABLED

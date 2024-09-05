@@ -26,5 +26,5 @@ supported:
   - pinctrl
   - spi
   - i2c
-  - can
   - adc
+  - pwm

@@ -16,6 +16,9 @@
 #include <dt-bindings/clock/nxp_s32k144_clock.h>
 #include <nxp/nxp_s32k1xx.dtsi>
 
+/delete-node/ &adc0;
+/delete-node/ &adc1;
+
 / {
 	cpus {
 		cpu@0 {
@@ -33,13 +36,13 @@
 
 		sraml: sram@1fff8000 {
 			compatible = "mmio-sram";
-			reg = <0x1fff8000 DT_SIZE_K(32)>;
+			reg = <0x1fff8000 DT_SIZE_K(60)>;
 		};
 
-		sramu: sram@20000000 {
+		/* sramu: sram@20000000 {
 			compatible = "mmio-sram";
 			reg = <0x20000000 DT_SIZE_K(28)>;
-		};
+		}; */
 
 		adc0: adc@4003b000{
 			compatible = "nxp,s32k144-adc12";

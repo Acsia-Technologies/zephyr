@@ -29,10 +29,10 @@
 		zephyr,uart-mcumgr = &lpuart0;
 		zephyr,uart-pipe = &lpuart0;
 		//zephyr,display = &lpi2c0;
-		zephyr,canbus = &flexcan0;
+		//zephyr,canbus = &flexcan0;
 		zephyr,flash-controller = &ftfc;
 		zephyr,code-partition = &slot0_partition;
-		zephyr,io_channels = &adc0;
+		//zephyr,io_channels = &adc0;
 		inc,uart = &lpuart1;
 		dlt,uart = &lpuart0;
 	};
@@ -139,12 +139,13 @@
 	compatible = "nxp,kinetis-ftm-pwm";
 	pinctrl-0 = <&ftm0_default>;
 	pinctrl-names = "default";
+	clock-source = "system";
 	prescaler = <128>;
 	#pwm-cells = <3>;
 	status = "okay";
 };
 
-&flexcan0 {
+/* &flexcan0 {
 	pinctrl-0 = <&flexcan0_default>;
 	pinctrl-names = "default";
 	// phys = <&can_phy0>;
@@ -153,7 +154,7 @@
 	bus-speed-data = <1000000>;
 	sample-point-data = <875>;
 	status = "okay";
-};
+}; */
 
 &flash0 {
 
@@ -177,4 +178,12 @@
 			reg = <0x48000 0x38000>;
 		};
 	};
+};
+
+&adc0 {
+	status = "okay";
+};
+
+&adc1 {
+	status = "okay";
 };
