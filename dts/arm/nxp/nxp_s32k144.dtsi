@@ -44,7 +44,7 @@
 			reg = <0x20000000 DT_SIZE_K(28)>;
 		}; */
 
-		adc0: adc@4003b000{
+		/* adc0: adc@4003b000{
 			compatible = "nxp,s32k144-adc12";
 			clk-source = < 0x0 >;
 			clk_divider = < 0x0 >;
@@ -61,7 +61,7 @@
 			interrupts = <40 0>;
 			#io-channel-cells = <1>;
 			status = "okay";
-		};
+		}; */
 
 		/*
 		 * Template
