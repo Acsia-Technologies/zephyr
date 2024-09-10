@@ -16,8 +16,6 @@
 #include <dt-bindings/clock/nxp_s32k144_clock.h>
 #include <nxp/nxp_s32k1xx.dtsi>
 
-/delete-node/ &adc0;
-/delete-node/ &adc1;
 
 / {
 	cpus {
