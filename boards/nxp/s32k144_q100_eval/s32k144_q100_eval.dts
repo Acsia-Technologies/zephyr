@@ -32,7 +32,6 @@
 		//zephyr,canbus = &flexcan0;
 		zephyr,flash-controller = &ftfc;
 		zephyr,code-partition = &slot0_partition;
-		//zephyr,io_channels = &adc0;
 		inc,uart = &lpuart1;
 		dlt,uart = &lpuart0;
 	};
